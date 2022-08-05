@@ -1,0 +1,22 @@
+<h1>Proofs catalogue</h1>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Description</th>
+<th>Pool Type</th>
+<th colspan="3"></th>
+</tr>
+</thead>
+<tbody>
+<% @proofs.each do |proof| %>
+<tr>
+<td><%= proof.abbreviation %></td>
+<td><%= proof.description %></td>
+<td><%= proof.pool_type %></td>
+<td><%=link_to 'Show', proof %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to 'New Proof', new_proof_path %>

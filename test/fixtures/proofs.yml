@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  abbreviation: MyString
+  description: MyString
+  pool_type: MyString
+
+two:
+  abbreviation: MyString
+  description: MyString
+  pool_type: MyString

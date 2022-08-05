@@ -1,0 +1,31 @@
+<%= form_with(model: proof, local: true) do |form| %>
+    <% if proof.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(proof.errors.count, "error") %> 
+                    prohibited this proof from being saved:
+            </h2>
+            <ul>
+                <% proof.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+        <%= form.label :abbreviation %>
+        <%= form.text_field :abbreviation %>
+    </div>
+    <div class="field">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+    </div>
+    <div class="field">
+        <%= form.label :pool_type %>
+        <%= form.text_field :pool_type %>
+    </div>
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+
+<% end %>
