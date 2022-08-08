@@ -13,19 +13,16 @@
     <% end %>
 
     <div class="field">
-        <%= form.label :abbreviation %>
-        <%= form.text_field :abbreviation %>
+        <%= form.label :abbreviation, class: "form-label" %>
+        <%= form.text_field :abbreviation, class: "form-control" %>
     </div>
-    <div class="field">
-        <%= form.label :description %>
-        <%= form.text_field :description %>
-    </div>
-    <div class="field">
-        <%= form.label :pool_type %>
-        <%= form.text_field :pool_type %>
+    <div class="field mt-1">
+        <%= form.label :description, class: "form-label" %>
+        <%= form.text_field :description, class: "form-control" %>
     </div>
     <div class="actions">
-        <%= form.submit %>
+        <%= form.submit :Save, class: "btn btn-primary mt-3" %>
+        <%= link_to 'Back', proofs_path(@proof), class: "btn btn-primary mt-3" %>
     </div>
 
 <% end %>

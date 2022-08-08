@@ -74,3 +74,4 @@ end
 gem 'bootstrap', '~> 5.2.0'
 gem "jquery-rails"
 gem "sassc-rails"
+gem "font-awesome-sass", "~> 6.1.2"

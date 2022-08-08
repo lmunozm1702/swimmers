@@ -1,0 +1,16 @@
+<div class="field mt-3">
+        <%= form.label :pool_type, class: "form-label" %>
+        <%= form.select :pool_type, @pool, {}, class: "form-select" %>
+</div>
+
+<td><%= proof.pool_type.humanize.capitalize %></td>
+
+#proof_controller.rb
+before_action :set_pool_type, only: %i[new edit]
+
+def set_pool_type
+    @pool = Proof.pools.keys.map {|type| [type.humanize, type]}
+end
+
+#model/proof.rb
+enum :pool, [:long_50_meters, :short_25_meters, :sea, :lake, :river], _suffix: true, default: :long
