@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_proof: MyString
+  event_date: 2022-08-08
+  event_gender: MyString
+  event_type: MyString
+  seed_time: 2022-08-08 19:55:08
+  event_time: 2022-08-08 19:55:08
+
+two:
+  event_proof: MyString
+  event_date: 2022-08-08
+  event_gender: MyString
+  event_type: MyString
+  seed_time: 2022-08-08 19:55:08
+  event_time: 2022-08-08 19:55:08

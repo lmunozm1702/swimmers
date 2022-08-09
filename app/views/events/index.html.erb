@@ -1,0 +1,45 @@
+<header class="text-end">
+    <h3>
+        >> Events <%= link_to icon('fa-solid', 'square-plus', class:'fa-1x'), new_event_path %>
+    </h3>
+</header>
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr class="table-primary">
+            <th>Date</th>
+            <th>Proof</th>
+            <th>Gender</th>
+            <th>Event Type</th>
+            <th>Seed Time</th>
+            <th>Event Time</th>
+            <th>Gap</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @events.each do |event| %>
+            <tr>
+                <td><%= event.event_date %></td>
+                <td><%= event.event_proof %></td>
+                <td class="text-capitalize"><%= event.event_gender %></td>
+                <td class="text-capitalize"><%= event.event_type %></td>
+                <td ><%= event.my_seed_time %></td>
+                <td><%= event.my_event_time %></td>
+
+                <% if event.my_gap[0] == "-"%>
+                    <td class="text-success"><strong><%= event.my_gap %></strong></td>    
+                <% else %>
+                    <td class="text-danger"><strong><%= event.my_gap %></strong></td>    
+                <% end %>
+
+                <td><%= link_to icon('fa-solid', 'pencil'), edit_event_path(event) %></td>
+                <td><%= link_to icon('fa-solid', 'trash'), event, method: :delete %></td>
+            </tr>
+        <% end %>
+        <tr>
+        <td colspan="9" class="text-start">
+            <%= link_to icon('fa-solid', 'square-plus', class:'fa-1x'), new_event_path %> Add
+        </td>
+    </tbody>
+</table>
