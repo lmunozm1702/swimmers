@@ -1,0 +1,20 @@
+<header class="text-end">
+    <h3>>>
+        <%= @event.event_date %>
+        /
+        <%= @event.event_proof %>
+        -
+        <%= @event.event_type.capitalize%>
+    </h3>
+</header>
+<p>
+    <strong>Abbreviation:</strong>
+    <%= @event.event_proof %>
+</p>
+<p>
+    <strong>Description:</strong>
+    <%#= @proof.description %>
+</p>
+
+<%#= link_to 'Edit', edit_proof_path(@proof)%> |
+<%#= link_to 'Back', proofs_path(@proof) %>

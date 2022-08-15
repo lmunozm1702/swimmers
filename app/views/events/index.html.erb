@@ -14,7 +14,7 @@
             <th>Seed Time</th>
             <th>Event Time</th>
             <th>Gap</th>
-            <th colspan="2">Actions</th>
+            <th colspan="3">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -32,13 +32,14 @@
                 <% else %>
                     <td class="text-danger"><strong><%= event.my_gap %></strong></td>    
                 <% end %>
-
+                
+                <td><%= link_to icon('fa-solid', 'stopwatch'), event_path(event) %></td>
                 <td><%= link_to icon('fa-solid', 'pencil'), edit_event_path(event) %></td>
                 <td><%= link_to icon('fa-solid', 'trash'), event, method: :delete %></td>
             </tr>
         <% end %>
         <tr>
-        <td colspan="9" class="text-start">
+        <td colspan="10" class="text-start">
             <%= link_to icon('fa-solid', 'square-plus', class:'fa-1x'), new_event_path %> Add
         </td>
     </tbody>
